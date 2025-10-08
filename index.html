@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GitHub TTS</title>
+    <style>
+        /* Simple styling for readability */
+        body { font-family: sans-serif; max-width: 600px; margin: 40px auto; padding: 20px; }
+        textarea { width: 100%; height: 150px; margin-bottom: 10px; padding: 10px; }
+        button, select, input { padding: 10px; margin: 5px 0; }
+    </style>
+</head>
+<body>
+    <h1>Browser Text-to-Speech</h1>
+    <p>Paste your text below. **Note:** Voice quality depends on your browser and OS.</p>
+
+    <textarea id="text-input" placeholder="Paste your content here..."></textarea>
+
+    <label for="voice-select">Select Voice:</label>
+    <select id="voice-select"></select>
+    <br>
+
+    <label for="rate-slider">Speed (Rate):</label>
+    <input type="range" id="rate-slider" min="0.1" max="10" value="1" step="0.1">
+    <span id="rate-value">1.0</span>
+    <br>
+
+    <label for="pitch-slider">Pitch:</label>
+    <input type="range" id="pitch-slider" min="0" max="2" value="1" step="0.1">
+    <span id="pitch-value">1.0</span>
+    <br>
+
+    <button id="speak-button">Convert & Speak</button>
+    <button id="stop-button" disabled>Stop</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
